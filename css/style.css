@@ -1,0 +1,157 @@
+body {
+  background-color: #202020;
+  color: #3c3c3c;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.logo{
+  color: white;
+  margin: 10px auto auto 10px;
+}
+/*************   Create the menubar with two flex objects.  One to the set the icon and list on
+  oposite sides; another to create a flexible list of menu items. *********************************/
+nav  {
+  display: flex;
+  margin-bottom: 0;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 10px 10px auto auto;
+}
+
+.nav-item a {
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+}
+.nav-item:hover a {
+  background-color: lightgray;
+  color: #3c3c3c;
+  border-radius: 15%;
+}
+/******* Create banner section with background image and headings on top *****/
+.banner {
+  background-image:url("../images/home_banner-x489.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 435px;
+  text-align: center;
+  color: white;
+  font-size: 16pt;
+  font-size: 2vw;
+}
+.banner h1 {
+  padding-top: 100px;
+  font-family: 'Lobster', cursive;
+  text-shadow: 3px 3px 2px #474747;
+}
+/**********       Create 3 column layout         ************/
+.content-one {
+  text-align: center;
+  background-color: lightgrey;
+  font-size: 1rem;
+  padding: 25px 25px 50px 25px;
+}
+h2 {
+  padding-top: 25px;
+  font-weight: bold;
+  font-size: 24px;
+  padding-bottom: 25px;
+}
+h4 {
+  font-weight: bold;
+  padding-bottom: 25px;
+}
+.triple-col {
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  margin-bottom: 25px;
+}
+
+/************* Create 4 column layout content two   ************************/
+.content-two {
+  background-color: white;
+  text-align: center;
+  margin-top: 0;
+  padding: 25px 25px 50px 25px;
+}
+.content-two a {
+  text-decoration: none;
+  color: rgb(190, 14, 14);
+}
+.button {
+  background-color: yellow;
+  margin-left: 75px;
+  margin-right: 75px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 12%;
+}
+.quad-col {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+.item-coffee img{
+  width: 100%;
+}
+.item-coffee button {
+  color: yellow;
+  border-radius: 12%;
+}
+/********************** content 3 *******************/
+.content-three {
+  background-color: white;
+  text-align: center;
+  padding: 25px 25px 50px 25px;
+}
+.content-three .item-col {
+  max-width: 40ch;
+}
+.content-three img{
+  width: 100%;
+}
+/********** footer ************/
+footer {
+  padding: 25px;
+  background-color: lightgrey;
+  text-align: center;
+}
+
+footer .button {
+  width: 15%;
+  border-radius: 15%;
+  margin-left: 42.5%;
+  margin-right: auto;
+}
+
+/**************** create a verticle layout for mobile devices (smaller than 600px ).    *********/
+@media only screen and (max-width: 600px) {
+  .triple-col {
+    grid-template-columns: 1fr;
+    grid-column: auto;
+  }
+  .content-three .triple-col {
+    padding: 0 75px 0 75px;
+  }
+  .quad-col {
+    grid-template-columns: 1fr;
+    grid-column: auto;
+  }
+  nav {
+    flex-direction: column;
+    font-size: 2vw;
+  }
+  .banner {
+    background-size: cover;
+  }
+  .logo {
+    margin-left: 46%;
+  }
+  .nav-links {
+    flex-direction: column;
+    padding-right: 44%;
+  }
+}
